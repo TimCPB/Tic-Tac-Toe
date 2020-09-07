@@ -11,6 +11,7 @@
   },
   "author": "",
   "license": "ISC",
+  // These are the dependencies needed for devs to work on the code
   "devDependencies": {
     "@babel/cli": "^7.11.5",
     "@babel/core": "^7.11.5",
