@@ -1,10 +1,10 @@
 import React from 'react';
-import App from './App.react';
+import App from './App';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
   const tree = renderer
-    .create(<Appp page="http://www.facebook.com">Facebook</Link>)
+    .create(<App page="http://localhost:3000">App</App>)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
