@@ -5,15 +5,21 @@ class NoteList extends Component{
   constructor(props) {
     super(props)
     this.state = {
-      notesList: []
+      notesList: ''
     }
   }
+
+  myChangeHandler(){
+    (event).preventDefault();
+    this.setState({ notesList: event.target.value });
+  }
+
   render(){
     return(
       <div className="NoteList">
           <form>
     <label>
-      Add Note: <input type="text" />
+      Add Note: <input type="text" onChange={this.myChangeHandler}/>
     </label>
     <input type="submit" value="Submit" />
   </form>
