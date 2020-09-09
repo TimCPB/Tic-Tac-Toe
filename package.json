@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
   "scripts": {
     "test": "jest",
     "start": "webpack-dev-server",
