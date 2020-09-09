@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 
 class NoteList extends Component{
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      notesList: []
+    }
+  }
   render(){
     return(
       <div className="NoteList">

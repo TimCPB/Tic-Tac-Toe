@@ -14,4 +14,5 @@ test('user can add a note', () => {
   const note = screen.getByText("A test note!");
 
   expect(note).toBeInTheDocument();
+  screen.debug()
 })
