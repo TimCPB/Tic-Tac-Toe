@@ -7,5 +7,5 @@ import App from './App'
 test('Shows Yo world!', () => {
   render(<App />)
 
-  expect(screen.getByText('Yo world!')).toBeInTheDocument()
+  expect(screen.getByText(/Yo world!/)).toBeInTheDocument()
 })
