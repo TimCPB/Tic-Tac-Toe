@@ -1,4 +1,4 @@
-import greet from './greet'
+import greet from '../src/greet'
 import { TestScheduler } from 'jest'
 
 test("takes name and returns 'hello ${name}'", () => {
