@@ -1,28 +1,38 @@
 import React, { Component } from 'react';
 
 class NoteList extends Component{
-
   constructor(props) {
-    super(props)
-    this.state = {
-      notesList: ''
-    }
+    super(props);
+    this.state = {value: '', notes: []};
+    this.handleChange = this.handleChange.bind(this);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  myChangeHandler(){
-    (event).preventDefault();
-    this.setState({ notesList: event.target.value });
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    this.state.notes.push(this.state.value)
+    this.setState({notes: this.state.notes});
+    event.preventDefault();
   }
 
   render(){
-    return(
+    return (
       <div className="NoteList">
-          <form>
-    <label>
-      Add Note: <input type="text" onChange={this.myChangeHandler}/>
-    </label>
-    <input type="submit" value="Submit" />
-  </form>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Add Note: <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+        {this.state.notes.map( (note, index) => {
+          return (
+            <p key={index}>{note}</p>
+          )
+        })}
       </div>
     )
   }
