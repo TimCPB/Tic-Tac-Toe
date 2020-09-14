@@ -8,7 +8,7 @@ exports[`renders correctly when there are no notes 1`] = `
     onSubmit={[Function]}
   >
     <label>
-      Add Note: 
+      Add Nooooote: 
       <input
         onChange={[Function]}
         type="text"
