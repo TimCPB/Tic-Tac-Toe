@@ -24,7 +24,7 @@ class NoteList extends Component{
       <div className="NoteList">
         <form onSubmit={this.handleSubmit}>
           <label>
-            Add Note: <input type="text" value={this.state.value} onChange={this.handleChange} />
+            Add Nooooote: <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />
         </form>
